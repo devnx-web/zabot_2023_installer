@@ -15,7 +15,7 @@ frontend_node_dependencies() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /zabot/frontend
+  cd /home/zabot/frontend
   npm install
 EOF
 
@@ -35,7 +35,7 @@ frontend_node_build() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /zabot/frontend
+  cd /home/zabot/frontend
   npm install
   npm run build
 EOF
@@ -58,7 +58,7 @@ frontend_update() {
   sudo su - deploy <<EOF
   cd /home/deploy/whaticket
   git pull
-  cd /zabot/frontend
+  cd /home/zabot/frontend
   npm install
   rm -rf build
   npm run build
@@ -87,7 +87,7 @@ frontend_set_env() {
   backend_url=https://$backend_url
 
 sudo su - deploy << EOF
-  cat <<[-]EOF > /zabot/frontend/.env
+  cat <<[-]EOF > /home/zabot/frontend/.env
 REACT_APP_BACKEND_URL=${backend_url}
 [-]EOF
 EOF
@@ -108,7 +108,7 @@ frontend_start_pm2() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /zabot/frontend
+  cd /home/zabot/frontend
   pm2 start server.js --name whaticket-frontend
   pm2 save
 EOF

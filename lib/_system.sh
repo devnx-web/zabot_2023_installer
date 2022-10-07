@@ -15,6 +15,7 @@ system_create_user() {
   sudo su - root <<EOF
   useradd -m -p zabot -s /bin/bash -G sudo deploy
   usermod -aG sudo deploy
+  chown -R deploy /home/
 EOF
 
   sleep 2

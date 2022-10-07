@@ -16,4 +16,4 @@ db_pass=$(openssl rand -base64 32)
 db_user=whaticket
 db_name=whaticket
 
-deploy_email=suport@zabot.app.br
+deploy_email=deploy@whaticket.com

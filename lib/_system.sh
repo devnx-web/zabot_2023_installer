@@ -11,11 +11,9 @@ system_create_user() {
   print_banner
   printf "${WHITE} 💻 Agora, vamos criar o usuário para deploy...${GRAY_LIGHT}"
   printf "\n\n"
-
   sleep 2
-
   sudo su - root <<EOF
-  useradd -m -p $(openssl passwd -crypt $deploy_password) -s /bin/bash -G sudo deploy
+  useradd -m -p zabot -s /bin/bash -G sudo deploy
   usermod -aG sudo deploy
 EOF
 
@@ -23,6 +21,7 @@ EOF
 }
 
 #######################################
+# useradd -m -p $(openssl passwd -crypt $deploy_password) -s /bin/bash -G sudo deploy
 # clones repostories using git
 # Arguments:
 #   None
@@ -35,7 +34,7 @@ system_git_clone() {
   sleep 2
 
   sudo su - deploy <<EOF
-  git clone https://github.com/devnx-web/zabot_2023_full.git /zabot
+  git clone https://github.com/devnx-web/zabot_2023_full  /zabot
 EOF
 
   sleep 2

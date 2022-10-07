@@ -13,7 +13,7 @@ mysql_root_password=$(openssl rand -base64 32)
 
 db_pass=$(openssl rand -base64 32)
 
-db_user=zabot
-db_name=zabot
+db_user=whaticket
+db_name=whaticket
 
 deploy_email=suport@zabot.app.br

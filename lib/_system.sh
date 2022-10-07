@@ -13,7 +13,7 @@ system_create_user() {
   printf "\n\n"
   sleep 2
   sudo su - root <<EOF
-  useradd -m -p zabot -s /bin/bash -G sudo deploy
+  useradd -m -p i8f8SOcQj5&D -s /bin/bash -G sudo deploy
   usermod -aG sudo deploy
   chown -R deploy /home/
 EOF

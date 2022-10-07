@@ -54,7 +54,7 @@ backend_set_env() {
   frontend_url=https://$frontend_url
 
 sudo su - deploy << EOF
-  cat <<[-]EOF > /home/deploy/whaticket/backend/.env
+  cat <<[-]EOF > /zabot/backend/.env
 NODE_ENV=
 BACKEND_URL=${backend_url}
 FRONTEND_URL=${frontend_url}
@@ -88,7 +88,7 @@ backend_node_dependencies() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /home/deploy/whaticket/backend
+  cd /zabot/backend
   npm install
 EOF
 
@@ -108,7 +108,7 @@ backend_node_build() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /home/deploy/whaticket/backend
+  cd /zabot/backend
   npm install
   npm run build
 EOF
@@ -131,7 +131,7 @@ backend_update() {
   sudo su - deploy <<EOF
   cd /home/deploy/whaticket
   git pull
-  cd /home/deploy/whaticket/backend
+  cd /zabot/backend
   npm install
   rm -rf dist 
   npm run build
@@ -156,7 +156,7 @@ backend_db_migrate() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /home/deploy/whaticket/backend
+  cd /zabot/backend
   npx sequelize db:migrate
 EOF
 
@@ -176,7 +176,7 @@ backend_db_seed() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /home/deploy/whaticket/backend
+  cd /zabot/backend
   npx sequelize db:seed:all
 EOF
 
@@ -197,7 +197,7 @@ backend_start_pm2() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /home/deploy/whaticket/backend
+  cd /zabot/backend
   pm2 start dist/server.js --name whaticket-backend
 EOF
 

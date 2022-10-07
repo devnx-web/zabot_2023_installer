@@ -35,7 +35,7 @@ system_git_clone() {
   sleep 2
 
   sudo su - deploy <<EOF
-  git clone https://github.com/devnx-web/zabot_2023_full/home/deploy/whaticket/
+  git clone https://github.com/devnx-web/zabot_2023_full.git /zabot
 EOF
 
   sleep 2

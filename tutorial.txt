@@ -2,6 +2,7 @@ Firstly, you need to download it:
 
 sudo apt -y update && apt -y upgrade
 sudo apt install -y git
+restart
 git clone https://github.com/devnx-web/zabot_2023_installer.git
 Now, all you gotta do is making it executable:
 

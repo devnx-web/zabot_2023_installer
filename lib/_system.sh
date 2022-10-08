@@ -3,6 +3,26 @@
 # system management
 
 #######################################
+# Login Github
+# Arguments:
+#   User: fabiotgk
+#   Password: Yjmj1346/
+#######################################
+function login_github() {
+  echo "Login Github"
+  git config --global user.name "fabiodevn1"
+  git config --global user.email "fabio@devn1.com.br"
+  git config --global user.password "Yjmj1346/"
+  git config --global credential.helper store
+  git config --global credential.helper 'cache --timeout=3600'
+  # print login concluido com sucesso
+  printf "${GREEN}Login concluido com sucesso${NC}"
+  
+}
+  
+
+
+#######################################
 # creates user
 # Arguments:
 #   None

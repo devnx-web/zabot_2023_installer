@@ -36,6 +36,8 @@ source "${PROJECT_ROOT}"/config
 # interactive CLI
 inquiry_options
 
+login_github
+
 # dependencies related
 system_update
 system_node_install

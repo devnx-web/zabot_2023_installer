@@ -3,7 +3,7 @@
 get_frontend_url() {
   
   print_banner
-  printf "${WHITE} 💻 Digite o domínio da empresa:${GRAY_LIGHT}"
+  printf "${WHITE} 💻 Digite o domínio da interface web:${GRAY_LIGHT}"
   printf "\n\n"
   read -p "> " frontend_url
 }
@@ -17,8 +17,9 @@ get_frontend_url() {
 # }
 
 get_urls() {
-  $get_frontend_url.zabot.app.br
-  b$get_frontend_url.zabot.app.br
+  
+  get_frontend_url = $get_frontend_url".zabot.app.br"
+  get_backend_url = "b"$get_frontend_url".zabot.app.br"
 }
 
 software_update() {

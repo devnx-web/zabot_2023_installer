@@ -9,3 +9,6 @@ sudo chmod +x ./zabot_2023_installer/zabot
 
 cd ./zabot_2023_installer
 sudo ./zabot
+
+
+i8f8SOcQj5D

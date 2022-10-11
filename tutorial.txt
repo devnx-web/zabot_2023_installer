@@ -12,3 +12,12 @@ sudo ./zabot
 
 
 i8f8SOcQj5D
+
+sudo su
+useradd -m deploy
+passwd deploy
+i8f8SOcQj5D
+i8f8SOcQj5D
+usermod -a -G sudo deploy
+chsh -s /bin/bash deploy
+

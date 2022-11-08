@@ -129,7 +129,7 @@ backend_update() {
   sleep 2
 
   sudo su - deploy <<EOF
-  cd /home/deploy/whaticket
+  cd /home/zabot
   git pull
   cd /home/zabot/backend
   npm install
